@@ -1,0 +1,57 @@
+﻿<Window x:Class="MasterMind_PE_2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MasterMind_PE_2"
+        mc:Ignorable="d"
+        Title="MasterMind_2" Height="450" Width="800">
+    <Grid>
+        <Menu>
+           <MenuItem Header="Menu" Height="30" Width="110">
+                <MenuItem x:Name="Bestand" Header="Bestand">
+                    <MenuItem x:Name="newspel" Header="Nieuw spel" Click="newspel_Click"/>
+                    <MenuItem x:Name="scores" Header="Highscores"/>
+                    <MenuItem x:Name="afsluit" Header="afsluiten" Click="afsluit_Click"/>
+                </MenuItem>
+                <MenuItem x:Name="instellingen" Header="instellingen">
+                    <MenuItem x:Name="aapogingen" Header="aantal pogingen"/>
+                </MenuItem>
+           </MenuItem>
+       </Menu>
+
+        <Button x:Name="ValidateButton" Content="Check code" Width="400" Height="30" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,185,0,0" Click="ValidateButton_Click"/>
+
+        <ComboBox x:Name="Color1" Margin="0,55,600,349" />
+        <ComboBox x:Name="Color2" Margin="200,55,400,349"/>
+        <ComboBox x:Name="Color3" Margin="400,55,200,349"/>
+        <ComboBox x:Name="Color4" Margin="600,55,0,349"/>
+
+        <Border x:Name="Result1" BorderThickness="2" BorderBrush="Black" Background="White" Margin="0,85,600,249"/>
+        <Border x:Name="Result2" BorderThickness="2" BorderBrush="Black" Background="White" Margin="200,85,400,249"/>
+        <Border x:Name="Result3" BorderThickness="2" BorderBrush="Black" Background="White" Margin="400,85,200,249"/>
+        <Border x:Name="Result4" BorderThickness="2" BorderBrush="Black" Background="White" Margin="600,85,0,249"/>
+
+        <Border x:Name="ColorBox1" BorderBrush="Black" Background="White" Margin="0,370,600,30"/>
+        <Border x:Name="ColorBox2" BorderBrush="Black" Background="White" Margin="200,370,400,30"/>
+        <Border x:Name="ColorBox3" BorderBrush="Black" Background="White" Margin="400,370,200,30"/>
+        <Border x:Name="ColorBox4" BorderBrush="Black" Background="White" Margin="600,370,0,30"/>
+
+        <Label x:Name="AttemptsLabel" Content="Pogingen: 0" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="600,183,0,0" FontSize="16"/>
+        <Label x:Name="ScoreLabel" Content="Score = 100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="693,183,0,0" FontSize="16"/>
+
+        <TextBlock x:Name="MessageText" Text="" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,180,0,0" FontSize="20" Foreground="Black"/>
+
+        <StackPanel x:Name="FeedbackPanel" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,220,0,0">
+            <TextBlock x:Name="FeedbackMessage" Text="Feedback: " HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="16" />
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Width="800">
+                <Border x:Name="FeedbackColor1" Width="200" Height="40" BorderBrush="Black" Background="White"/>
+                <Border x:Name="FeedbackColor2" Width="200" Height="40" BorderBrush="Black" Background="White"/>
+                <Border x:Name="FeedbackColor3" Width="200" Height="40" BorderBrush="Black" Background="White"/>
+                <Border x:Name="FeedbackColor4" Width="200" Height="40" BorderBrush="Black" Background="White"/>
+            </StackPanel>
+        </StackPanel>
+        
+    </Grid>
+</Window>
+
